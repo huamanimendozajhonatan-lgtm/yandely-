@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Yandely ❤️</title>
+
+<style>
+body{
+    margin:0;
+    font-family: 'Segoe UI', sans-serif;
+    background:#0f0f0f;
+    color:white;
+    text-align:center;
+}
+
+h1{
+    margin-top:40px;
+    font-size:42px;
+    letter-spacing:2px;
+}
+
+h2{
+    font-weight:300;
+    color:#ff4d88;
+}
+
+button{
+    padding:12px 25px;
+    font-size:18px;
+    border:none;
+    border-radius:30px;
+    margin:15px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.si{
+    background:#ff4d88;
+    color:white;
+}
+
+.no{
+    background:#333;
+    color:white;
+}
+
+button:hover{
+    transform:scale(1.1);
+}
+
+.galeria{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    margin-top:40px;
+}
+
+.foto{
+    position:relative;
+    margin:15px;
+    overflow:hidden;
+    border-radius:20px;
+}
+
+.foto img{
+    width:250px;
+    height:320px;
+    object-fit:cover;
+    transition:0.5s;
+    border-radius:20px;
+}
+
+.foto:hover img{
+    transform:scale(1.1);
+    filter:brightness(45%);
+}
+
+.texto{
+    position:absolute;
+    bottom:0;
+    width:100%;
+    padding:15px;
+    background:linear-gradient(transparent, rgba(0,0,0,0.8));
+    color:white;
+    font-size:16px;
+    opacity:0;
+    transition:0.5s;
+}
+
+.foto:hover .texto{
+    opacity:1;
+}
+
+.mensaje{
+    margin-top:50px;
+    font-size:20px;
+    max-width:700px;
+    margin-left:auto;
+    margin-right:auto;
+    line-height:1.6;
+    color:#ccc;
+}
+</style>
+</head>
+
+<body>
+
+<h1>Yandely</h1>
+<h2>Lo nuestro empezó sin plan… pero no fue casualidad.</h2>
+
+<button class="si" onclick="aceptar()">Siempre contigo ❤️</button>
+<button class="no" onmouseover="mover()">Paso 😅</button>
+
+<div class="galeria">
+
+<div class="foto">
+    <img src="foto1.jpg">
+    <div class="texto">Todo empezó de la nada.</div>
+</div>
+
+<div class="foto">
+    <img src="foto2.jpg">
+    <div class="texto">Sin buscarlo… pasó.</div>
+</div>
+
+<div class="foto">
+    <img src="foto3.jpg">
+    <div class="texto">Y se volvió real.</div>
+</div>
+
+<div class="foto">
+    <img src="foto4.jpg">
+    <div class="texto">No fue planeado.</div>
+</div>
+
+<div class="foto">
+    <img src="foto5.jpg">
+    <div class="texto">Pero sí fue elegido.</div>
+</div>
+
+</div>
+
+<div class="mensaje">
+No fue una historia preparada.  
+No hubo guion ni estrategia.  
+
+Solo dos personas coincidiendo…  
+y decidiendo quedarse.  
+
+Y si es contigo, yo me quedo.
+</div>
+
+<script>
+function aceptar(){
+    alert("Entonces sigamos escribiendo lo nuestro ❤️🔥");
+}
+
+function mover(){
+    const btn = document.querySelector(".no");
+    btn.style.position="absolute";
+    btn.style.top=Math.random()*window.innerHeight+"px";
+    btn.style.left=Math.random()*window.innerWidth+"px";
+}
+</script>
+
+</body>
+</html>
+ 
